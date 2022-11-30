@@ -1,12 +1,12 @@
 import "./App.css";
 import { RouterPath } from "./utils/routes";
-
+import { Home } from "./pages/Home/Home";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <RouterPath>
-          <App/>
+          <Home/>
         </RouterPath>
       </header>
     </div>
