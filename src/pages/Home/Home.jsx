@@ -6,10 +6,8 @@ export const Home = () => {
         
         <>
         <TopNav/>
-        <div className="vid-lib">
         <SideNav/>
         <CategorySection />
-        </div>
         </>
     );
 }
