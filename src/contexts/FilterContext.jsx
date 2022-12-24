@@ -1,5 +1,5 @@
+import React from "react";
 import { createContext, useContext, useState } from "react";
-import { useEffect } from "react";
 
 const FilterContext = createContext();
 

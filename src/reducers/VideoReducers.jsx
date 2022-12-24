@@ -1,3 +1,4 @@
+import React from "react";
 export const VideoReducer = (state, { type, payload }) => {
     switch (type) {
       case "SET_CATEGORY":

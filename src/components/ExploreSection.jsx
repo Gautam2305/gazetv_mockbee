@@ -1,3 +1,4 @@
+import React from "react";
 import {CategorySection} from "./CategorySection";
 import { Filters } from "./Filters";
 import { SideNav } from "./SideNav";

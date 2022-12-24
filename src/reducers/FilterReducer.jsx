@@ -1,3 +1,4 @@
+import React from "react";
 export const FilterReducer = (state, action) => {
     switch(action.type){
         case "INFORMATIVE":
