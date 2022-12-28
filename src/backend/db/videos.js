@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 /**
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
@@ -12,7 +11,7 @@ export const videos = [
     description: "Finding alien life on a distant planet would be amazing news - or would it? If we are not the only intelligent life in the universe, this probably means our days are numbered and doom is certain.", 
     creator: "Kurzgesagt - In a Nutshell",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/Screenshot__237__c-M964_ek.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668970128657", 
-    category:"Informative",
+    category:"informative",
     views: "37k",
     isLiked:false,
     watchLater:false 
@@ -24,7 +23,7 @@ export const videos = [
     description: "This time you can join us on a journey through the microcosm. Curious? Head over to our shop and get it while supplies last.", 
     creator: "Kurzgesagt - In a Nutshell",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vithumbfinal_6JRTfD_w1?ik-sdk-version=javascript-1.4.3&updatedAt=1669639861458", 
-    category:"Informative",
+    category:"informative",
     views: "347k",
     isLiked:false,
     watchLater:false 
@@ -36,7 +35,7 @@ export const videos = [
     description: "Humans. We have been around for a while now. When we think about our past we think about ancient civilizations, the pyramids, stuff like that. But this is only a tiny, tiny part of our history.", 
     creator: "Kurzgesagt - In a Nutshell",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb03_e4Zq-VQ9B?ik-sdk-version=javascript-1.4.3&updatedAt=1668971287691", 
-    category:"Indie",
+    category:"informative",
     views: "12M",
     isLiked:false,
     watchLater:false 
@@ -48,7 +47,7 @@ export const videos = [
     description: "Presenting Agar Tum Saath Ho Full VIDEO Song from TAMASHA movie starring Ranbir Kapoor & Deepika Padukone exclusively on T-Series. Enjoy the soulful songs of Tamasha movie 2015 in the voice of Alka Yagnik & Arijit Singh music directed by A.R. Rahman.", 
     creator: "T-Series",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb04_GiBzClc9H?ik-sdk-version=javascript-1.4.3&updatedAt=1668971795365", 
-    category:"Music",
+    category:"music",
     views: "300M",
     isLiked:false,
     watchLater:false 
@@ -60,7 +59,7 @@ export const videos = [
     description: "Words so sweet, you cannot help fall in love!Presenting the Offcial Lyric Video of the song - Hawayein from the movie - Jab Harry Met Sejal.Voiced by Arijit Singh and penned by Irshad Kamil, Hawayein is one of the most mesmerizing love songs of the year.", 
     creator: "SonyMusic VEVO",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb04_hgpR6oVrW?ik-sdk-version=javascript-1.4.3&updatedAt=1668972238672", 
-    category:"Music",
+    category:"music",
     views: "40M",
     isLiked:false,
     watchLater:false 
@@ -72,7 +71,7 @@ export const videos = [
     description: "Presenting the lyrical video of the song Dildara from the Bollywood movie  Ra One.This song is sung by Shafqat Amanat Ali & Music is of Vishal - Shekhar.The movie features Shah Rukh Khan, Kareena Kapoor  in leading roles,Just keep giving us your love and keep listening to T-Series. ", 
     creator: "T-Series",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb05_YufEYpgja?ik-sdk-version=javascript-1.4.3&updatedAt=1668972453872", 
-    category:"Music",
+    category:"music",
     views: "55M",
     isLiked:false,
     watchLater:false 
@@ -84,7 +83,7 @@ export const videos = [
     description: "Like.Share.Subscribe.For Chat.", 
     creator: "Tanmay Bhat",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb06_kJUu-9meW?ik-sdk-version=javascript-1.4.3&updatedAt=1668975015526", 
-    category:"Comedy",
+    category:"comedy",
     views: "2M",
     isLiked:false,
     watchLater:false 
@@ -96,7 +95,7 @@ export const videos = [
     description: "This is a three part stand up comedy series called triptych, that explores how some of the major decisions of our life are influenced by society, through a system of fear, that kills individual thought and identity.", 
     creator: "Manik Manha",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb07_IBNipItVJ?ik-sdk-version=javascript-1.4.3&updatedAt=1668975197213", 
-    category:"Comedy",
+    category:"comedy",
     views: "3M",
     isLiked:false,
     watchLater:false 
@@ -108,7 +107,7 @@ export const videos = [
     description: "Jokes about my first pet. Try to watch till the end.", 
     creator: "Abhishek Upmanyu",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb11_5hdJhNoxi?ik-sdk-version=javascript-1.4.3&updatedAt=1669640253103", 
-    category:"Comedy",
+    category:"comedy",
     views: "37M",
     isLiked:false,
     watchLater:false 
@@ -120,7 +119,7 @@ export const videos = [
     description: "'I'm the last person standing between them and what they really want'. Marvel Studios' Secret Invasion, an Original series, streaming 2023 on Disney+. ", 
     creator: "Marvel Entertainment",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb08_JlB8I6CDG?ik-sdk-version=javascript-1.4.3&updatedAt=1668976306898", 
-    category:"Movies",
+    category:"movies",
     views: "42M",
     isLiked:false,
     watchLater:false 
@@ -132,7 +131,7 @@ export const videos = [
     description: "Set more than a decade after the events of the first film, “Avatar: The Way of Water” begins to tell the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.", 
     creator: "Avatar",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb10_-kooiDiGp?ik-sdk-version=javascript-1.4.3&updatedAt=1668976361405", 
-    category:"Movies",
+    category:"movies",
     views: "84M",
     isLiked:false,
     watchLater:false 
@@ -144,7 +143,7 @@ export const videos = [
     description: "Only in theaters & IMAX March 24. Starring Keanu Reeves, Donnie Yen, Bill Skarsgård, Laurence Fishburne, Hiroyuki Sanada, Shamier Anderson, Lance Reddick, Rina Sawayama, Scott Adkins, and Ian McShane.", 
     creator: "Lionsgate Movies",
     thumbnail:"https://ik.imagekit.io/o0gfjqre5u2/vidthumb09_jW7DEDnjW?ik-sdk-version=javascript-1.4.3&updatedAt=1668976331989", 
-    category:"Movies",
+    category:"movies",
     views: "9M",
     isLiked:false,
     watchLater:false 
