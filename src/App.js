@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { RouterPath } from "./utils/routes";
 import { Home } from "./pages/Home/Home";
