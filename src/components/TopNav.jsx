@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const TopNav = () => {
     return(
@@ -7,7 +8,7 @@ export const TopNav = () => {
             <div className="brand-heading">
                 GazeTv
             </div>
-            <button className="btn btn-outline-primary login-button">Login</button>
+            <Link to="/login" className="btn btn-outline-primary login-button">Login</Link>
             </div>  
         </>
     )
