@@ -1,9 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const LikeContext = createContext();
 
 const LikeProvider = ({children}) => {
-    const [ likes, setLikes] = useState({liked:[]})
+    const [ likes, setLikes] = useState({isLiked:[]})
     return(
         <LikeContext.Provider value={{likes, setLikes}}>
             {children}

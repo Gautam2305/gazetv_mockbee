@@ -1,5 +1,41 @@
+import axios from "axios";
 import React from "react";
+import { useNavigate } from "react-router";
+import { useAuth } from "../contexts/AuthContext";
+import { useLike } from "../contexts/LikeContext";
 export const Card = ({item}) => {
+    const { user } = useAuth();
+    const navigate = useNavigate();
+    const {setLikes} = useLike();
+
+    const likeHandler = async () => {
+        try{
+            const likeRes = await axios({
+                method: "post",
+                url:"/api/user/likes",
+                headers: {authorization: user.token},
+                data: {video:item}
+            })
+            console.log(likeRes);
+            setLikes({isLiked: likeRes.data.likes});
+        }catch(error){
+            console.log(error.response.data);
+        }
+    }
+
+    const removeLikeHandler = async () => {
+        try{
+            const removeLikeRes = await axios({
+                method:"delete",
+                url:`/api/user/likes/${item._id}`,
+                headers:{authorization : user.token},
+                data: {video: item},
+            })
+            setLikes({isLiked: removeLikeRes.data.likes});
+        }catch (error) {
+            console.log(error);
+        }
+    }
     return(
         <div>
             <div className="video-container">
@@ -11,8 +47,8 @@ export const Card = ({item}) => {
                 </div>
                 <div className="extras-container">
                     <div className="like-btn-container">
-                    <i class="fa-solid fa-thumbs-up like-btn"></i>
-                    <i class="fa-solid fa-thumbs-down like-btn"></i>
+                    <i onClick={()=> likeHandler()} className="fa-solid fa-thumbs-up like-btn"></i>
+                    <i onClick={()=> removeLikeHandler()} className="fa-solid fa-thumbs-down like-btn"></i>
                     </div>
                 
                 <i className="fa-solid fa-clock-rotate-left"></i>
