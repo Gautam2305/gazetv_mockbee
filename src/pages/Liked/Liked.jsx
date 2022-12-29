@@ -20,14 +20,12 @@ export const Liked = () => {
             <TopNav/>
             <SideNav/>
             <div className="liked-page-container">
-                <div>
-                    <h3>Your liked videos are....</h3>
-                    <div className="categ-container">{likes.isLiked.map(item => 
+                    <div className="categ-container">
+                    {likes.isLiked.map(item => 
                     <LikeCard 
                     key={item.id}
                     item={item} 
                     />)}</div>
-                </div>
             </div>
             </>
         )}
