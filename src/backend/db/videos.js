@@ -138,7 +138,7 @@ export const videos = [
   },
   {
     _id: "Wo5HUhzP_bbI",
-    title: "John Wick: Chapter 4 (2023 Movie) Official Trailer - Keanu Reeves, Donnie Yen, Bill Skarsgård",
+    title: "John Wick:Chapter 4 Official Trailer - Keanu Reeves, Donnie Yen",
     videoId: "qEVUtrk8_B4&t=2s",
     description: "Only in theaters & IMAX March 24. Starring Keanu Reeves, Donnie Yen, Bill Skarsgård, Laurence Fishburne, Hiroyuki Sanada, Shamier Anderson, Lance Reddick, Rina Sawayama, Scott Adkins, and Ian McShane.", 
     creator: "Lionsgate Movies",

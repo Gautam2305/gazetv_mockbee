@@ -100,10 +100,10 @@ body::-webkit-scrollbar{
 .categ-container{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   margin-top: 4rem; 
   margin-left: 2.25rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 @media screen and (max-width: 750px) {
   .filter-container{
@@ -112,7 +112,7 @@ body::-webkit-scrollbar{
   .categ-container{
     max-width: 100%;
     display: flex;
-    margin-left: 2rem;
+    margin-left: 2.25rem;
     margin-top: -3rem;
     flex-flow: column wrap;
   }
@@ -185,4 +185,30 @@ body::-webkit-scrollbar{
 }
 .login-button-container{
   text-align: center;
+}
+.extras-container,.creator-container{
+  display: flex;
+  justify-content: space-between;
+}
+.like-btn{
+  background-color: var(--brand-color);
+  border: none;
+  color: var(--font-primary);
+  margin-right: 0.25rem;
+}
+.vid-title{
+  width: 90%;
+  height: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.not-logged{
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+}
+.login-loggedout{
+  width: 50%;
+  margin: 1rem;
 }
