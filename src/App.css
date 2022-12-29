@@ -202,3 +202,13 @@ body::-webkit-scrollbar{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.not-logged{
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+}
+.login-loggedout{
+  width: 50%;
+  margin: 1rem;
+}
