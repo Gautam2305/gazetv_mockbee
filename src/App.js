@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { RouterPath } from "./utils/routes";
 import { Home } from "./pages/Home/Home";
-import { Explore } from "./pages";
+import { Explore, Signup } from "./pages";
 import { Login } from "./pages";
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Home/>
           <Explore/>
           <Login/>
+          <Signup/>
         </RouterPath>
       </header>
     </div>

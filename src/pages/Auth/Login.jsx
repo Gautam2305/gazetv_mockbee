@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 export const Login = () => {
     const navigate = useNavigate();
-    const { setUser } = useAuth();
     const [userDetail, setUserDetail] = useState({email:"", password:""});
+    const { setUser } = useAuth();
 
     const changeHandler = (e) => 
     {
@@ -18,8 +19,10 @@ export const Login = () => {
     const loginHandler = async (testUser) => {
         try{
             const loginRes = await axios.post("/api/auth/login", testUser ? { email:"abc@gmail.com", password:"abc123"} : userDetail);
-            setUser({ user : loginRes.data.foundUser,
-            token: loginRes.data.encodedToken});
+            setUser({ 
+                user: loginRes.data.foundUser,
+                token: loginRes.data.encodedToken
+            });
             navigate("/");
         }
         catch(error){
@@ -54,6 +57,7 @@ export const Login = () => {
             <div className="login-button-container">
             <div className="test-cred" onClick={() => loginHandler(true)}>Login with test credentials</div>
             <button className="login-button-secondary" onClick={() => loginHandler(false)}>Login</button>
+            <div><Link className="btn btn-outline-primary login-button" to="/signup">Signup</Link></div>
             </div>
             </div>
         </div>

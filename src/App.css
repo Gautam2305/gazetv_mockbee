@@ -174,7 +174,7 @@ body::-webkit-scrollbar{
   border: none;
   border-radius: 0.25rem;
 }
-.input-email, .input-password{
+.input-email, .input-password, .input-fn{
   padding: 0.25rem;
   margin: 0.75rem;
   width: 60%;
