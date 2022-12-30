@@ -3,10 +3,41 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
 import { useLike } from "../contexts/LikeContext";
-export const Card = ({item}) => {
+import { useWatchLater } from "../contexts/WatchLaterContext";
+export const Card = ({item,isWatchLater}) => {
     const { user } = useAuth();
     const navigate = useNavigate();
     const {setLikes} = useLike();
+    const {setWatchLater} = useWatchLater();
+
+    const watchlaterHandler = async () => {
+        try{
+            const watchlaterRes = await axios({
+                method:"post",
+                url:"/api/user/watchlater",
+                headers: {authorization: user.token},
+                data: {video: item}
+            })
+            setWatchLater({watchlaterList: watchlaterRes.data.watchlater});
+        }
+        catch(error){
+            console.log(error.response.data);
+        }
+    }
+    const removeWatchHandler = async () => {
+        try{
+            const removeWatchRes = await axios({
+                method:"delete",
+                url:`/api/user/watchlater/${item._id}`,
+                headers: {authorization: user.token},
+                data: {video: item}
+            })
+            setWatchLater({watchlaterList: removeWatchRes.data.watchlater});
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
 
     const likeHandler = async () => {
         try{
@@ -50,8 +81,8 @@ export const Card = ({item}) => {
                     <i onClick={()=> likeHandler()} className="fa-solid fa-thumbs-up like-btn"></i>
                     <i onClick={()=> removeLikeHandler()} className="fa-solid fa-thumbs-down like-btn"></i>
                     </div>
+                {isWatchLater ? <i onClick={() => removeWatchHandler()} className="fa-solid fa-clock"></i>: <i onClick={() => watchlaterHandler()} className="fa-solid fa-clock"></i>  }
                 
-                <i className="fa-solid fa-clock-rotate-left"></i>
                 </div>
                 
             </div>
