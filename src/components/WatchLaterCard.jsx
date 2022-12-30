@@ -1,9 +1,6 @@
 import React from "react";
-import { useWatchLater } from "../contexts/WatchLaterContext";
 
 export const WatchLaterCard = ({item}) => {
-    const {watchlater} = useWatchLater();
-    console.log(watchlater.watchlaterList);
     return(
         <div>
             <div className="video-container">
