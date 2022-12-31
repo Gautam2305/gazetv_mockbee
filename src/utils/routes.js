@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { VideoPlay } from "../components/VideoPlay";
 import {Login,
   Signup,
   Error,
@@ -20,6 +21,7 @@ import {Login,
         <Route path="/playlist" element={<Playlist/>}/>
         <Route path="/watchlater" element={<WatchLater/>}/>
         <Route path="/signup" element={<Signup/>}/>
+        <Route path="/video/:videoId" element={<VideoPlay />}></Route>
         <Route path="/login" element={<Login/>}/>
         <Route path="/error" element={<Error/>}/>
       </Routes>

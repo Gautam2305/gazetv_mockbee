@@ -83,11 +83,12 @@ export const Card = ({item,isWatchLater}) => {
         catch(error) {
             console.log(error.response.data);
         }
+        navigate(`/video/${item._id}`);
     }
     return(
         <div>
             <div className="video-container">
-                <img src={item.thumbnail} className="video-thumb" alt="video_thumbnail" />
+                <img onClick={() => historyHandler()} src={item.thumbnail} className="video-thumb" alt="video_thumbnail" />
                 <div className="vid-title">{item.title}</div>
                 <div className="creator-container">
                 <div className="vid-creator">{item.creator}</div>

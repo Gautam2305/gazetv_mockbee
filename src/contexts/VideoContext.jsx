@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 const VideoContext = createContext();
-export const useSingleVideo = (videoId) => {
+const useSingleVideo = (videoId) => {
   const {videoList} = useVideo();
   return videoList.find((item) => item.id === videoId)
 }
@@ -28,4 +28,4 @@ const VideoProvider = ({children}) => {
 
 const useVideo = () => useContext(VideoContext);
 
-export {VideoProvider,useVideo};
+export {VideoProvider,useVideo,useSingleVideo};
