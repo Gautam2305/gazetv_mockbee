@@ -212,3 +212,14 @@ body::-webkit-scrollbar{
   width: 50%;
   margin: 1rem;
 }
+.video-play-card-container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.video-play-container{
+  text-align: center;
+  width: 60%;
+  margin: 1rem;
+}

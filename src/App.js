@@ -13,6 +13,7 @@ function App() {
           <Explore/>
           <Login/>
           <Signup/>
+          
         </RouterPath>
       </header>
     </div>

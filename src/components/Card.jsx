@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
+import { useHistory } from "../contexts/HistoryContext";
 import { useLike } from "../contexts/LikeContext";
 import { useWatchLater } from "../contexts/WatchLaterContext";
 export const Card = ({item,isWatchLater}) => {
@@ -9,6 +10,7 @@ export const Card = ({item,isWatchLater}) => {
     const navigate = useNavigate();
     const {setLikes} = useLike();
     const {setWatchLater} = useWatchLater();
+    const {setHistory} = useHistory();
 
     const watchlaterHandler = async () => {
         try{
@@ -67,10 +69,26 @@ export const Card = ({item,isWatchLater}) => {
             console.log(error);
         }
     }
+
+    const historyHandler = async () => {
+        try{
+            const historyRes = await axios({
+                method: "post",
+                url: "/api/user/history",
+                headers: {authorization: user.token},
+                data: {video: item}
+            });
+            setHistory({history: historyRes.data.history})
+        }
+        catch(error) {
+            console.log(error.response.data);
+        }
+        navigate(`/video/${item._id}`);
+    }
     return(
         <div>
             <div className="video-container">
-                <img src={item.thumbnail} className="video-thumb" alt="video_thumbnail" />
+                <img onClick={() => historyHandler()} src={item.thumbnail} className="video-thumb" alt="video_thumbnail" />
                 <div className="vid-title">{item.title}</div>
                 <div className="creator-container">
                 <div className="vid-creator">{item.creator}</div>
