@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 import { SideNav } from "./SideNav";
 import { TopNav } from "./TopNav";
 import { useSingleVideo } from "../contexts/VideoContext";
-import { videos } from "../backend/db/videos";
 export const VideoPlay = () => {
     const {videoId} = useParams();
     const videoObj = useSingleVideo(videoId);
