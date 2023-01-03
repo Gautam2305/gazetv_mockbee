@@ -14,7 +14,11 @@ export const Card = ({item,isWatchLater}) => {
     const {setHistory} = useHistory();
     const {setPlaylistModal} = usePlaylist();
 
-    const playlistHandler = () => setPlaylistModal(item);
+    const playlistHandler = () => {
+        setPlaylistModal(item);
+      };
+
+
     const watchlaterHandler = async () => {
         try{
             const watchlaterRes = await axios({

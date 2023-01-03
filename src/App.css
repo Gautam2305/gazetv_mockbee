@@ -195,6 +195,7 @@ body::-webkit-scrollbar{
   border: none;
   color: var(--font-primary);
   margin-right: 0.25rem;
+  cursor: pointer;
 }
 .vid-title{
   width: 90%;
@@ -222,4 +223,24 @@ body::-webkit-scrollbar{
   text-align: center;
   width: 60%;
   margin: 1rem;
+}
+.playlist-modal{
+  position: relative;
+  justify-content: center;
+  padding-top: 10rem;
+  z-index: 10000;
+  gap: 0.5rem;
+}
+.playlist-btn{
+  background-color: var(--brand-color);
+}
+.playlist-box{
+  border: 2px solid white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.playlist-title{
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
 }
