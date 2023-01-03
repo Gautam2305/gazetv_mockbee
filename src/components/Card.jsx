@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "../contexts/HistoryContext";
 import { useLike } from "../contexts/LikeContext";
+import { usePlaylist } from "../contexts/PlaylistContext";
 import { useWatchLater } from "../contexts/WatchLaterContext";
 export const Card = ({item,isWatchLater}) => {
     const { user } = useAuth();
@@ -11,6 +12,12 @@ export const Card = ({item,isWatchLater}) => {
     const {setLikes} = useLike();
     const {setWatchLater} = useWatchLater();
     const {setHistory} = useHistory();
+    const {setPlaylistModal} = usePlaylist();
+
+    const playlistHandler = () => {
+        setPlaylistModal(item);
+      };
+
 
     const watchlaterHandler = async () => {
         try{
@@ -99,10 +106,11 @@ export const Card = ({item,isWatchLater}) => {
                     <i onClick={()=> likeHandler()} className="fa-solid fa-thumbs-up like-btn"></i>
                     <i onClick={()=> removeLikeHandler()} className="fa-solid fa-thumbs-down like-btn"></i>
                     </div>
-                {isWatchLater ? <i onClick={() => removeWatchHandler()} className="fa-solid fa-clock"></i>: <i onClick={() => watchlaterHandler()} className="fa-solid fa-clock"></i>  }
-                
-                </div>
-                
+                    <div>
+                    <i onClick={() => playlistHandler()} className="fa-solid fa-folder"></i>
+                    {isWatchLater ? <i onClick={() => removeWatchHandler()} className="fa-solid fa-clock"></i>: <i onClick={() => watchlaterHandler()} className="fa-solid fa-clock"></i>  }
+                    </div>
+                </div>   
             </div>
         </div>
     )
